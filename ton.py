@@ -7,8 +7,11 @@ import matplotlib.ticker as ticker
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton
 from aiogram.filters import Command
+from dotenv import load_dotenv
+import os
 
-TOKEN = "7816335685:AAE8kTWawN_YHs1VQoAAdt9owGv9nLZEqMY"
+load_dotenv()
+TOKEN = os.getenv("BOT_TOKEN")
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher()
